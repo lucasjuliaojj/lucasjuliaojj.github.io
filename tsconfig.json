@@ -21,8 +21,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "allowJs": true,
-    "allowImportingTsExtensions": true
+    "allowJs": true
   },
   "include": [
     "next-env.d.ts",

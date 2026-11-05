@@ -1,6 +1,6 @@
 /**
  * All site content lives here. Everything marked "From the posters" came from
- * the posters in assets/posters/. Empty lists hide their section until real content exists.
+ * the school's posters. Empty lists hide their section until real content exists.
  */
 
 export type Weekday = "seg" | "ter" | "qua" | "qui" | "sex" | "sab" | "dom";
