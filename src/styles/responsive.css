@@ -1,0 +1,95 @@
+@media (max-width: 1040px) {
+  .site-nav,
+  .site-header__cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: grid;
+  }
+
+  .programs,
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 36rem;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    display: block;
+    min-height: 0;
+  }
+
+  .hero__photo {
+    position: relative;
+    aspect-ratio: auto;
+    height: min(62svh, 125vw);
+  }
+
+  .hero__photo::after {
+    background: linear-gradient(to top, #050505 0, transparent 40%);
+  }
+
+  .hero__content {
+    margin-top: -3.5rem;
+    padding-block: 0 3.5rem;
+  }
+
+  .about,
+  .faq,
+  .contact__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .values li:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .values li:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .timetable {
+    display: none;
+  }
+
+  .day-list {
+    display: grid;
+  }
+
+  .floating-whatsapp--visible {
+    display: grid;
+  }
+
+  .site-footer__bottom {
+    padding-bottom: 5.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .button {
+    width: 100%;
+  }
+
+  .button--small {
+    width: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

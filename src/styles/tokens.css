@@ -1,0 +1,13 @@
+:root {
+  --black: #000;
+  --bg: #080808;
+  --surface: #111;
+  --surface-raised: #191919;
+  --line: rgba(255, 255, 255, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.32);
+  --white: #fff;
+  --soft: #b4b4b4;
+  --muted: #9a9a9a;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --section-space: clamp(4.5rem, 9vw, 7.5rem);
+}
