@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
   background: #050505;
@@ -73,14 +74,17 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1.75rem;
+  min-height: 2.75rem;
+  margin-top: 1rem;
   color: var(--soft);
   font-size: 0.9375rem;
   transition: color 0.2s;
 }
 
-.hero__address:hover {
-  color: var(--white);
+@media (hover: hover) {
+  .hero__address:hover {
+    color: var(--white);
+  }
 }
 
 /* About */
@@ -195,10 +199,12 @@ h1 {
   padding: 2rem;
 }
 
-.program:hover,
-.plan:hover {
-  border-color: var(--line-strong);
-  background: var(--surface-raised);
+@media (hover: hover) {
+  .program:hover,
+  .plan:hover {
+    border-color: var(--line-strong);
+    background: var(--surface-raised);
+  }
 }
 
 .program__icon {
@@ -257,6 +263,7 @@ h1 {
 }
 
 .program .link-arrow {
+  align-self: flex-start;
   margin-top: auto;
 }
 
@@ -336,7 +343,7 @@ h1 {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-brand), sans-serif;
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -580,10 +587,12 @@ details p {
     border-color 0.2s;
 }
 
-.contact__links a:hover {
-  border-color: var(--white);
-  background: var(--white);
-  color: var(--black);
+@media (hover: hover) {
+  .contact__links a:hover {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--black);
+  }
 }
 
 .contact__icon {
@@ -605,8 +614,10 @@ details p {
   font-size: 0.875rem;
 }
 
-.contact__links a:hover .contact__text span {
-  color: inherit;
+@media (hover: hover) {
+  .contact__links a:hover .contact__text span {
+    color: inherit;
+  }
 }
 
 .contact__text strong {

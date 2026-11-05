@@ -25,19 +25,23 @@
   color: var(--black);
 }
 
-.button--primary:hover {
-  background: var(--black);
-  color: var(--white);
+@media (hover: hover) {
+  .button--primary:hover {
+    background: var(--black);
+    color: var(--white);
+  }
 }
 
 .button--ghost {
   border-color: var(--line-strong);
 }
 
-.button--ghost:hover {
-  border-color: var(--white);
-  background: var(--white);
-  color: var(--black);
+@media (hover: hover) {
+  .button--ghost:hover {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--black);
+  }
 }
 
 .button--small {
@@ -49,6 +53,7 @@
 .link-arrow {
   display: inline-flex;
   align-items: center;
+  min-height: 2.75rem;
   gap: 0.5rem;
   font-family: var(--font-brand), sans-serif;
   font-size: 0.75rem;
@@ -61,8 +66,10 @@
   transition: transform 0.2s;
 }
 
-.link-arrow:hover svg {
-  transform: translateX(4px);
+@media (hover: hover) {
+  .link-arrow:hover svg {
+    transform: translateX(4px);
+  }
 }
 
 /* Logo */
@@ -93,7 +100,7 @@
 
 .lockup__sport {
   color: var(--soft);
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.3em;
 }
