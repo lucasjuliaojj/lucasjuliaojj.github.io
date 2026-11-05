@@ -1,6 +1,7 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import { business, hero } from "@/content/site";
+import { assetPath } from "@/lib/assets";
 import { mapsUrl, whatsappUrl } from "@/lib/links";
 import { WhatsAppIcon } from "@/components/ui/BrandIcons";
 
@@ -9,7 +10,7 @@ export function Hero() {
     <section id="inicio" className="hero">
       <div className="hero__photo">
         <Image
-          src="/images/trainer-hero.webp"
+          src={assetPath("/images/trainer-hero.webp")}
           alt={hero.photoAlt}
           width={1280}
           height={1950}

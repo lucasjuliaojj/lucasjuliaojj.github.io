@@ -1,6 +1,7 @@
 import { ArrowRight, CalendarDays, Check, Clock } from "lucide-react";
 import Image from "next/image";
 import { programs } from "@/content/site";
+import { assetPath } from "@/lib/assets";
 import { programWhatsappUrl } from "@/lib/links";
 import { formatDays } from "@/lib/schedule";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -20,7 +21,7 @@ export function Programs() {
             <article key={program.id} className="program" data-reveal>
               <Image
                 className="program__icon"
-                src={program.icon}
+                src={assetPath(program.icon)}
                 alt=""
                 width={120}
                 height={100}

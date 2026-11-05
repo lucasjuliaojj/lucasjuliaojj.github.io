@@ -45,7 +45,9 @@ Four lists are empty on purpose, because the posters do not cover them: `stats`,
 
 ## Deployment
 
-`npm run build` produces plain files in `out/`, which any static host can serve. Set `NEXT_PUBLIC_SITE_URL` to the final domain before building, so social sharing images resolve. See [.env.example](.env.example).
+Every push to `main` deploys to GitHub Pages through [.github/workflows/deploy.yml](.github/workflows/deploy.yml). The workflow reads the site's address from GitHub, so it builds correctly for both the default `github.io` address and a custom domain.
+
+To host elsewhere, run `npm run build` and serve the plain files in `out/`. Set `NEXT_PUBLIC_SITE_URL` to the final address first, and `NEXT_BASE_PATH` too if the site is not at the domain root. See [.env.example](.env.example).
 
 ## Rights
 

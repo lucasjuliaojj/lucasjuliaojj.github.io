@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { coaches } from "@/content/site";
+import { assetPath } from "@/lib/assets";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Coaches() {
@@ -18,7 +19,7 @@ export function Coaches() {
           {coaches.map((coach) => (
             <article key={coach.name} className="coach" data-reveal>
               <Image
-                src={coach.photo}
+                src={assetPath(coach.photo)}
                 alt={coach.name}
                 width={640}
                 height={800}

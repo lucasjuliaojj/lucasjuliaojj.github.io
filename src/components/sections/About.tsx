@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { about, stats, values, type Value } from "@/content/site";
+import { assetPath } from "@/lib/assets";
 
 const VALUE_ICONS: Record<Value["id"], LucideIcon> = {
   disciplina: Shield,
@@ -21,7 +22,7 @@ export function About() {
       <div className="container about">
         <div className="about__photo" data-reveal>
           <Image
-            src="/images/black-belt.webp"
+            src={assetPath("/images/black-belt.webp")}
             alt={about.photoAlt}
             width={1200}
             height={1520}
