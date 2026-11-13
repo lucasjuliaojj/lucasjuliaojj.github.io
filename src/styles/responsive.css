@@ -171,3 +171,9 @@
     transition: none !important;
   }
 }
+
+@media (max-width: 340px) {
+  .day-list ul li {
+    font-size: 0.875rem;
+  }
+}
