@@ -399,7 +399,8 @@ h1 {
 
 .day-list ul li {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: baseline;
   justify-content: space-between;
   gap: 0 0.75rem;
 }
@@ -409,6 +410,8 @@ h1 {
 }
 
 .day-list time {
+  flex: none;
+  white-space: nowrap;
   color: var(--soft);
 }
 

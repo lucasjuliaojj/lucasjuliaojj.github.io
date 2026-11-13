@@ -10,6 +10,10 @@ import {
 } from "@/lib/schedule";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
+/** "19:00" -> "19h", "19:30" -> "19h30" */
+const formatHour = (time: string) =>
+  time.replace(":00", "").replace(":", "h") + (time.endsWith(":00") ? "h" : "");
+
 const timetable = buildTimetable(programs);
 
 const subscribe = () => () => {};
@@ -87,9 +91,9 @@ export function Schedule() {
               <ul>
                 {entries.map((entry) => (
                   <li key={`${entry.start}-${entry.program.id}`}>
-                    <span>{entry.program.name}</span>
+                    <span>{entry.program.shortName}</span>
                     <time>
-                      {entry.start} às {entry.end}
+                      {formatHour(entry.start)}–{formatHour(entry.end)}
                     </time>
                   </li>
                 ))}
