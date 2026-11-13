@@ -66,8 +66,7 @@ export function Schedule() {
                       >
                         {program ? (
                           <span className="timetable__class">
-                            {program.shortName}
-                            <small>{program.label}</small>
+                            {program.name}
                           </span>
                         ) : (
                           <span className="sr-only">Sem aula</span>
@@ -91,7 +90,7 @@ export function Schedule() {
               <ul>
                 {entries.map((entry) => (
                   <li key={`${entry.start}-${entry.program.id}`}>
-                    <span>{entry.program.shortName}</span>
+                    <span>{entry.program.name}</span>
                     <time>
                       {formatHour(entry.start)}–{formatHour(entry.end)}
                     </time>

@@ -15,8 +15,6 @@ export interface Session {
 export interface Program {
   id: string;
   name: string;
-  /** Short name used inside the timetable. */
-  shortName: string;
   label: string;
   description: string;
   /** Path in public/. */
@@ -131,7 +129,6 @@ export const programs: Program[] = [
   {
     id: "kids",
     name: "Kids",
-    shortName: "Kids",
     label: "De 4 a 8 anos",
     description: "Aulas próprias para as crianças mais pequenas.",
     icon: "/icons/kids.svg",
@@ -147,7 +144,6 @@ export const programs: Program[] = [
   {
     id: "infantil",
     name: "Infantil",
-    shortName: "Infantil",
     label: "De 9 a 13 anos",
     description: "Aulas para crianças e pré-adolescentes.",
     icon: "/icons/kids.svg",
@@ -163,7 +159,6 @@ export const programs: Program[] = [
   {
     id: "adultos-iniciantes",
     name: "Adultos Iniciantes",
-    shortName: "Iniciantes",
     label: "Adultos",
     description: "Para quem está a começar no Jiu-Jítsu.",
     icon: "/icons/kimono.svg",
@@ -173,7 +168,6 @@ export const programs: Program[] = [
   {
     id: "adultos-avancados",
     name: "Adultos Avançados",
-    shortName: "Avançados",
     label: "Adultos",
     description: "Para quem já treina e quer evoluir.",
     icon: "/icons/kimono.svg",
