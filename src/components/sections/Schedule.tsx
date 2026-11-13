@@ -62,7 +62,8 @@ export function Schedule() {
                       >
                         {program ? (
                           <span className="timetable__class">
-                            {program.name}
+                            {program.shortName}
+                            <small>{program.label}</small>
                           </span>
                         ) : (
                           <span className="sr-only">Sem aula</span>

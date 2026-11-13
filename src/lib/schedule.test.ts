@@ -19,16 +19,16 @@ describe("buildTimetable", () => {
   it("places each program in the right slot", () => {
     const [kids, adults] = timetable.slots;
     expect(kids?.entries.seg?.id).toBe("kids");
-    expect(kids?.entries.ter).toBeUndefined();
-    expect(adults?.entries.seg?.id).toBe("adulto-kimono");
-    expect(adults?.entries.ter?.id).toBe("adulto-no-gi");
+    expect(kids?.entries.ter?.id).toBe("infantil");
+    expect(adults?.entries.seg?.id).toBe("adultos-avancados");
+    expect(adults?.entries.ter?.id).toBe("adultos-iniciantes");
   });
 
   it("orders each day's classes by time", () => {
     const monday = timetable.byDay.find(({ day }) => day === "seg");
     expect(monday?.entries.map((entry) => entry.program.id)).toEqual([
       "kids",
-      "adulto-kimono",
+      "adultos-avancados",
     ]);
   });
 });

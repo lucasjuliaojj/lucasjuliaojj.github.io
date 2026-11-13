@@ -182,6 +182,10 @@ h1 {
   gap: 1.25rem;
 }
 
+.programs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .program,
 .coach,
 .quote,
@@ -325,11 +329,22 @@ h1 {
 }
 
 .timetable__class {
+  display: block;
   font-family: var(--font-display), sans-serif;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+.timetable__class small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-family: var(--font-brand), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
 }
 
 .is-today {
